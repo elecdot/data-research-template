@@ -5,3 +5,6 @@ ruff:
 
 test:
     uv run pytest
+
+nbsync:
+    uv run jupytext --sync notebooks/*.ipynb
