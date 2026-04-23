@@ -2,7 +2,7 @@
 
 Minimal template for data research projects.
 
-Use `uv sync` to create the environment, then open `tutorial.ipynb` or add your own notebooks under `notebooks/`.
+Welcome, please explore `tutorial.ipynb` first.
 
 Common commands:
 
