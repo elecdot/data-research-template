@@ -18,3 +18,4 @@ Directory overview:
 - `outputs/`: generated figures, tables, and run outputs.
 - `scripts/`: one-off or reusable research scripts.
 - `src/`: importable Python package code.
+- `tests/`: test regression and artifact-consistency checks.
