@@ -1,10 +1,10 @@
 set shell := ["bash", "-c"]
 
 ruff:
-    uv run ruff check .
+    UV_CACHE_DIR=/tmp/uv-cache uv run ruff check .
 
 test:
-    uv run pytest
+    UV_CACHE_DIR=/tmp/uv-cache uv run pytest
 
 nbsync:
-    uv run jupytext --sync notebooks/*.ipynb
+    UV_CACHE_DIR=/tmp/uv-cache uv run jupytext --sync notebooks/*.ipynb
