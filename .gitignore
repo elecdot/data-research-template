@@ -44,3 +44,6 @@ outputs/*
 *.mkv
 *.iso
 *.exe
+
+# Agent workspace-safe uv cache
+.cache/uv/

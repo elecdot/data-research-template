@@ -8,6 +8,13 @@ Common commands:
 
 - `just ruff`: run Ruff checks.
 - `just test`: run tests.
+- `just nbsync`: sync Jupyter notebooks with percent format.
+
+Agent/Copilot commands (with sandbox-safe cache):
+
+- `just agent-ruff`: run Ruff checks in agent environment.
+- `just agent-test`: run tests in agent environment.
+- `just agent-nbsync`: sync notebooks in agent environment.
 
 Directory overview:
 

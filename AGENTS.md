@@ -6,7 +6,8 @@ project overview and local conventions.
 ## Working Notes
 
 - Since `uv` is blocked by a read-only cache path in the agent's sandbox,
-use a workspace-safe cache directory instead, e.g., `UV_CACHE_DIR=/tmp/uv-cache uv <command>`.
+use a workspace-safe cache directory instead, e.g., `./scripts/agent-env.sh uv <command>` which uses `UV_CACHE_DIR=.cache/uv uv run <command>`.
+Tips: `justfile` encapsulates the agent-specific commands, refer to them.
 - Do not be constrained by the repository's current dependency set. When a task
 reasonably needs a missing dependency, add it autonomously using the project's
 dependency-management conventions (basically `uv add`).

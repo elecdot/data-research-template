@@ -1,10 +1,25 @@
 set shell := ["bash", "-c"]
 
+### Human/default
+
 ruff:
-    UV_CACHE_DIR=/tmp/uv-cache uv run ruff check .
+    uv run ruff check .
 
 test:
-    UV_CACHE_DIR=/tmp/uv-cache uv run pytest
+    uv run pytest
 
 nbsync:
-    UV_CACHE_DIR=/tmp/uv-cache uv run jupytext --sync notebooks/*.ipynb
+    uv run jupytext --sync notebooks/*.ipynb
+
+### Agent/sandebox-safe
+### Uses workspace-safe cache (`.cache/uv`) to comply with sandbox restrictions.
+### See `./scripts/agent-env.sh` for details.
+
+agent-ruff:
+    ./scripts/agent-env.sh uv run ruff check .
+
+agent-test:
+    ./scripts/agent-env.sh uv run pytest
+
+agent-nbsync:
+    ./scripts/agent-env.sh uv run jupytext --sync notebooks/*.ipynb
